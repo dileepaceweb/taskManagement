@@ -42,7 +42,7 @@ const getTask=async(req,res)=>{
 const updateTask=async(req,res)=>{
     try {
         const id=req.params.id
-        const {title,description}=req.query;
+        const {title,description}=req.body;
         //console.log("iddddd:",id);
         const task=await Task.findByIdAndUpdate(id,
             {
